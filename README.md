@@ -1,12 +1,12 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+This project demonstrates the creation of an app service that performs ML prediction and shows continuous integration using Azure Pipelines so changes automatically trigger a new deployment.  The prediction service was written for us, we handled the building and deployment in Azure.
 
 ## Project Plan
-<TODO: Project Plan
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+* A link to a Trello board for the project:  https://trello.com/b/3CT8vQCI/azure-ci-cd-pipeline
+* A link to a spreadsheet that includes the original and final project plan:  https://docs.google.com/spreadsheets/d/e/2PACX-1vTztCSCs5Tm4Kw7JfiS-OqhtgNsr4pvC8y-C_Y7R0avR6P7MBMO7pzfbyg15YCxN5GgvI0mlwmWAx8f/pubhtml
+* A link to the video demo:  <TBD>
 
 ## Instructions
 
