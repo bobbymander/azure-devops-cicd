@@ -80,6 +80,17 @@ az webapp up -n bobby-devops-cicd
 * Output of streamed log files from deployed application
 ![logtail](https://user-images.githubusercontent.com/5559085/132364891-0270cbe7-2fc4-4aa6-837e-86100008c9b5.JPG)
 
+## Load testing
+In order to perform load testing we will use locust.  To run follow these steps:
+```
+pip install locust
+locust
+```
+Then launch webpage http://localhost:8089/ as shown below.
+![locustin](https://user-images.githubusercontent.com/5559085/132411904-e4379d90-4130-4805-90fc-263bc1672ba5.JPG)
+
+Once the load test is stopped, you will see the results screen as shown below.
+![locustout](https://user-images.githubusercontent.com/5559085/132411972-a596aee4-2aad-435a-8803-807578237840.JPG)
 
 ## Enhancements
 
