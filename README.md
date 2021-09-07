@@ -8,15 +8,41 @@ This project demonstrates the creation of an app service that performs ML predic
 * A link to a spreadsheet that includes the original and final project plan:  https://docs.google.com/spreadsheets/d/e/2PACX-1vTztCSCs5Tm4Kw7JfiS-OqhtgNsr4pvC8y-C_Y7R0avR6P7MBMO7pzfbyg15YCxN5GgvI0mlwmWAx8f/pubhtml
 * A link to the video demo:  <TBD>
 
-## Instructions
-
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+## Architectural Diagram 
   ![Architecture](https://user-images.githubusercontent.com/5559085/132357039-a1adccfb-47db-4e51-bfc4-f0e5fc352b68.JPG)
 
+## Instructions
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+* Open Azure Cloud Shell from the Azure Portal
 
+* Clone the repo from GitHub
+```
+git clone git@github.com:bobbymander/azure-devops-cicd.git
+```
+  
+* Create the virtual env
+```
+cd azure-devops-cicd/
+python3 -m venv ~/.myrepo
+source ~/.myrepo/bin/activate
+make all
+```
+* Create the app service
+```
+az webapp up -n bobby-devops-cicd
+```
+* Create the pipeline (full details here:  https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops)
+- Login to https://dev.azure.com
+- Create a project
+- Create service connection to Azure Resource Manager
+- Create a new pipeline and attach to GitHub repo
+  
+* Run the test
+```
+./make_predict_azure_app.sh
+```
+
+## These screenshots show various points in the process
 * Project running on Azure App Service
 
 * Project cloned into Azure Cloud Shell
@@ -29,14 +55,8 @@ This project demonstrates the creation of an app service that performs ML predic
 
 * Running Azure App Service from Azure Pipelines automatic deployment
 
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
-
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
+* Successful prediction from deployed flask app in Azure Cloud Shell.  
+  
 
 * Output of streamed log files from deployed application
 
@@ -44,7 +64,9 @@ Port: 443
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+* The prediction service itself can be enhanced.
+* The testing script can be included in the pipeline as a post test.
+* If multiple developers will be involved, support for branches in the pipelines could be added.
 
 ## Demo 
 
