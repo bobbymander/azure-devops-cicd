@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/bobbymander/azure-devops-cicd/workflows/Python%20application%20test%20with%20Github%20Actions/badge.svg)](https://github.com/bobbymander/azure-devops-cicd/actions)
+
 # Overview
 
 This project demonstrates the creation of an app service that performs ML prediction and shows continuous integration using Azure Pipelines so changes automatically trigger a new deployment.  The prediction service was written for us, we handled the building and deployment in Azure.  The project takes us from managing the code in Azure Cloud Shell to the GitHub repo with GitHub actions enabled to Azure DevOps portal to create and manage pipelines to Azure Web Apps that provide a service to clients.  All parts need to be configured and deployed correctly for proper operation.  Any changes to the codebase trigger both GitHub Actions and Azure Pipelines for the app.
@@ -56,6 +58,9 @@ az webapp up -n bobby-devops-cicd
 
 * Output of a test run
   ![testoutput](https://user-images.githubusercontent.com/5559085/132364750-2da0ea5d-ffa3-4019-97e2-530fd5f56554.JPG)
+
+* Output of GitHub Actions
+![githubpassed3](https://user-images.githubusercontent.com/5559085/132394715-705754ec-8d0f-4814-b182-be6496386e1d.JPG)
 
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
