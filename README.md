@@ -1,6 +1,8 @@
+[![Actions Status](https://github.com/bobbymander/azure-devops-cicd/workflows/Python%20application%20test%20with%20Github%20Actions/badge.svg)](https://github.com/bobbymander/azure-devops-cicd/actions)
+
 # Overview
 
-This project demonstrates the creation of an app service that performs ML prediction and shows continuous integration using Azure Pipelines so changes automatically trigger a new deployment.  The prediction service was written for us, we handled the building and deployment in Azure.
+This project demonstrates the creation of an app service that performs ML prediction and shows continuous integration using Azure Pipelines so changes automatically trigger a new deployment.  The prediction service was written for us, we handled the building and deployment in Azure.  The project takes us from managing the code in Azure Cloud Shell to the GitHub repo with GitHub actions enabled to Azure DevOps portal to create and manage pipelines to Azure Web Apps that provide a service to clients.  All parts need to be configured and deployed correctly for proper operation.  Any changes to the codebase trigger both GitHub Actions and Azure Pipelines for the app.
 
 ## Project Plan
 
@@ -9,7 +11,7 @@ This project demonstrates the creation of an app service that performs ML predic
 * A link to the video demo:  https://youtu.be/lgin1HhTACI
 
 ## Architectural Diagram 
-  ![Architecture](https://user-images.githubusercontent.com/5559085/132357039-a1adccfb-47db-4e51-bfc4-f0e5fc352b68.JPG)
+![Architecture2](https://user-images.githubusercontent.com/5559085/132392568-15fa6efd-4770-4379-bc60-2d514839440e.JPG)
 
 ## Instructions
 
@@ -57,8 +59,15 @@ az webapp up -n bobby-devops-cicd
 * Output of a test run
   ![testoutput](https://user-images.githubusercontent.com/5559085/132364750-2da0ea5d-ffa3-4019-97e2-530fd5f56554.JPG)
 
+* Output of GitHub Actions
+![githubpassed3](https://user-images.githubusercontent.com/5559085/132394715-705754ec-8d0f-4814-b182-be6496386e1d.JPG)
+
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+
+* Azure App Service Deployment shown in Portal
+![appservicedeployment](https://user-images.githubusercontent.com/5559085/132396331-bd969cba-ec29-4a36-86da-6d49b1dc149a.JPG)
+
 
 * Running Azure App Service from Azure Pipelines automatic deployment (this shows a manual and automatic deployment)
   ![pipelinesdeploy](https://user-images.githubusercontent.com/5559085/132364787-eebbae7a-f32c-498b-b1b1-2092fae496c9.JPG)
