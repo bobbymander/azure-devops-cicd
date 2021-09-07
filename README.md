@@ -1,6 +1,6 @@
 # Overview
 
-This project demonstrates the creation of an app service that performs ML prediction and shows continuous integration using Azure Pipelines so changes automatically trigger a new deployment.  The prediction service was written for us, we handled the building and deployment in Azure.
+This project demonstrates the creation of an app service that performs ML prediction and shows continuous integration using Azure Pipelines so changes automatically trigger a new deployment.  The prediction service was written for us, we handled the building and deployment in Azure.  The project takes us from managing the code in Azure Cloud Shell to the GitHub repo with GitHub actions enabled to Azure DevOps portal to create and manage pipelines to Azure Web Apps that provide a service to clients.  All parts need to be configured and deployed correctly for proper operation.  Any changes to the codebase trigger both GitHub Actions and Azure Pipelines for the app.
 
 ## Project Plan
 
@@ -9,7 +9,7 @@ This project demonstrates the creation of an app service that performs ML predic
 * A link to the video demo:  https://youtu.be/lgin1HhTACI
 
 ## Architectural Diagram 
-  ![Architecture](https://user-images.githubusercontent.com/5559085/132357039-a1adccfb-47db-4e51-bfc4-f0e5fc352b68.JPG)
+![Architecture2](https://user-images.githubusercontent.com/5559085/132392568-15fa6efd-4770-4379-bc60-2d514839440e.JPG)
 
 ## Instructions
 
