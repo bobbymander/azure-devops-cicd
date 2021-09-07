@@ -1,51 +1,85 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+This project demonstrates the creation of an app service that performs ML prediction and shows continuous integration using Azure Pipelines so changes automatically trigger a new deployment.  The prediction service was written for us, we handled the building and deployment in Azure.
 
 ## Project Plan
-<TODO: Project Plan
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+* A link to a Trello board for the project:  https://trello.com/b/3CT8vQCI/azure-ci-cd-pipeline
+* A link to a spreadsheet that includes the original and final project plan:  https://docs.google.com/spreadsheets/d/e/2PACX-1vTztCSCs5Tm4Kw7JfiS-OqhtgNsr4pvC8y-C_Y7R0avR6P7MBMO7pzfbyg15YCxN5GgvI0mlwmWAx8f/pubhtml
+* A link to the video demo:  https://youtu.be/lgin1HhTACI
+
+## Architectural Diagram 
+  ![Architecture](https://user-images.githubusercontent.com/5559085/132357039-a1adccfb-47db-4e51-bfc4-f0e5fc352b68.JPG)
 
 ## Instructions
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+* Open Azure Cloud Shell from the Azure Portal
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+* Clone the repo from GitHub
+```
+git clone git@github.com:bobbymander/azure-devops-cicd.git
+```
+  
+* Create the virtual env
+```
+cd azure-devops-cicd/
+python3 -m venv ~/.myrepo
+source ~/.myrepo/bin/activate
+make all
+```
+* Create the app service
+```
+az webapp up -n bobby-devops-cicd
+```
+* Create the pipeline (full details here:  https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops)
+- Login to https://dev.azure.com
+- Create a project
+- Create service connection to Azure Resource Manager
+- Create a new pipeline and attach to GitHub repo
+  
+* Run the test
+```
+./make_predict_azure_app.sh
+```
 
+## These screenshots show various points in the process
 * Project running on Azure App Service
+![appservicerunning](https://user-images.githubusercontent.com/5559085/132364492-0b350fc8-dfcf-4a54-b807-be939dd295cc.JPG)
 
 * Project cloned into Azure Cloud Shell
+  ![gitclone](https://user-images.githubusercontent.com/5559085/132364653-b2e919bf-c4b4-4bb3-8116-b20f87c853fd.JPG)
+
 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
+  ![MakeAllTestPassedScreenshot](https://user-images.githubusercontent.com/5559085/132364708-4d018206-f581-4ddd-9ccf-7718dd8e37b2.JPG)
+
 
 * Output of a test run
+  ![testoutput](https://user-images.githubusercontent.com/5559085/132364750-2da0ea5d-ffa3-4019-97e2-530fd5f56554.JPG)
+
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 
-* Running Azure App Service from Azure Pipelines automatic deployment
+* Running Azure App Service from Azure Pipelines automatic deployment (this shows a manual and automatic deployment)
+  ![pipelinesdeploy](https://user-images.githubusercontent.com/5559085/132364787-eebbae7a-f32c-498b-b1b1-2092fae496c9.JPG)
 
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
 
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
+* Successful prediction from deployed flask app in Azure Cloud Shell.  
+  ![testoutput](https://user-images.githubusercontent.com/5559085/132364839-8b8e521f-5dd1-479c-8b9c-010da47c61f9.JPG)
+
 
 * Output of streamed log files from deployed application
+![logtail](https://user-images.githubusercontent.com/5559085/132364891-0270cbe7-2fc4-4aa6-837e-86100008c9b5.JPG)
 
-> 
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+* The prediction service itself can be enhanced.
+* The testing script can be included in the pipeline as a post test.
+* If multiple developers will be involved, support for branches in the pipelines could be added.
 
 ## Demo 
 
-<TODO: Add link Screencast on YouTube>
+Screencast link is here:  https://youtu.be/lgin1HhTACI
 
 
