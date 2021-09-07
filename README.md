@@ -6,7 +6,7 @@ This project demonstrates the creation of an app service that performs ML predic
 
 * A link to a Trello board for the project:  https://trello.com/b/3CT8vQCI/azure-ci-cd-pipeline
 * A link to a spreadsheet that includes the original and final project plan:  https://docs.google.com/spreadsheets/d/e/2PACX-1vTztCSCs5Tm4Kw7JfiS-OqhtgNsr4pvC8y-C_Y7R0avR6P7MBMO7pzfbyg15YCxN5GgvI0mlwmWAx8f/pubhtml
-* A link to the video demo:  <TBD>
+* A link to the video demo:  https://youtu.be/lgin1HhTACI
 
 ## Architectural Diagram 
   ![Architecture](https://user-images.githubusercontent.com/5559085/132357039-a1adccfb-47db-4e51-bfc4-f0e5fc352b68.JPG)
@@ -80,6 +80,6 @@ az webapp up -n bobby-devops-cicd
 
 ## Demo 
 
-<TODO: Add link Screencast on YouTube>
+Screencast link is here:  https://youtu.be/lgin1HhTACI
 
 
