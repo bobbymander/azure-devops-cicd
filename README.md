@@ -65,6 +65,10 @@ az webapp up -n bobby-devops-cicd
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 
+* Azure App Service Deployment shown in Portal
+![appservicedeployment](https://user-images.githubusercontent.com/5559085/132396331-bd969cba-ec29-4a36-86da-6d49b1dc149a.JPG)
+
+
 * Running Azure App Service from Azure Pipelines automatic deployment (this shows a manual and automatic deployment)
   ![pipelinesdeploy](https://user-images.githubusercontent.com/5559085/132364787-eebbae7a-f32c-498b-b1b1-2092fae496c9.JPG)
 
