@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: '33f29cf0-3bff-4d93-9feb-db449d5d7674'
 
   # Web app name
-  webAppName: 'flask-ml-azure'
+  webAppName: 'bobby-devops-cicd'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'flask-ml-azure'
+  environmentName: 'bobby-devops-cicd'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : flask-ml-azure'
+            displayName: 'Deploy Azure Web App : bobby-devops-cicd'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
