@@ -8,7 +8,7 @@ This project demonstrates the creation of an app service that performs ML predic
 
 * A link to a Trello board for the project:  https://trello.com/b/3CT8vQCI/azure-ci-cd-pipeline
 * A link to a spreadsheet that includes the original and final project plan:  https://docs.google.com/spreadsheets/d/e/2PACX-1vTztCSCs5Tm4Kw7JfiS-OqhtgNsr4pvC8y-C_Y7R0avR6P7MBMO7pzfbyg15YCxN5GgvI0mlwmWAx8f/pubhtml
-* A link to the video demo:  https://youtu.be/lgin1HhTACI
+* A link to the video demo:  https://youtu.be/sC6WM18zr78
 
 ## Architectural Diagram 
 ![Architecture2](https://user-images.githubusercontent.com/5559085/132392568-15fa6efd-4770-4379-bc60-2d514839440e.JPG)
@@ -100,6 +100,6 @@ Once the load test is stopped, you will see the results screen as shown below.
 
 ## Demo 
 
-Screencast link is here:  https://youtu.be/lgin1HhTACI
+Screencast link is here:  https://youtu.be/sC6WM18zr78
 
 
