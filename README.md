@@ -44,23 +44,33 @@ az webapp up -n bobby-devops-cicd
 
 ## These screenshots show various points in the process
 * Project running on Azure App Service
+![appservicerunning](https://user-images.githubusercontent.com/5559085/132364492-0b350fc8-dfcf-4a54-b807-be939dd295cc.JPG)
 
 * Project cloned into Azure Cloud Shell
+  ![gitclone](https://user-images.githubusercontent.com/5559085/132364653-b2e919bf-c4b4-4bb3-8116-b20f87c853fd.JPG)
+
 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
+  ![MakeAllTestPassedScreenshot](https://user-images.githubusercontent.com/5559085/132364708-4d018206-f581-4ddd-9ccf-7718dd8e37b2.JPG)
+
 
 * Output of a test run
+  ![testoutput](https://user-images.githubusercontent.com/5559085/132364750-2da0ea5d-ffa3-4019-97e2-530fd5f56554.JPG)
+
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 
-* Running Azure App Service from Azure Pipelines automatic deployment
+* Running Azure App Service from Azure Pipelines automatic deployment (this shows a manual and automatic deployment)
+  ![pipelinesdeploy](https://user-images.githubusercontent.com/5559085/132364787-eebbae7a-f32c-498b-b1b1-2092fae496c9.JPG)
+
 
 * Successful prediction from deployed flask app in Azure Cloud Shell.  
-  
+  ![testoutput](https://user-images.githubusercontent.com/5559085/132364839-8b8e521f-5dd1-479c-8b9c-010da47c61f9.JPG)
+
 
 * Output of streamed log files from deployed application
+![logtail](https://user-images.githubusercontent.com/5559085/132364891-0270cbe7-2fc4-4aa6-837e-86100008c9b5.JPG)
 
-> 
 
 ## Enhancements
 
